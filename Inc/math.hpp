@@ -2,11 +2,16 @@
 
 #include <math.h>
 #include <cmath>
+#include <cstdint>
 
 #define sqr(x) ((x * x))
 
 #ifndef INF
-    #define INF (1.0 / 0.0)
+    #ifdef COORDS_DATATYPE
+        #define INF static_cast<COORDS_DATATYPE>(~0)
+    #else
+        #define INF static_cast<uint16_t>(~0)
+    #endif
 #endif //ifndef INF
 
 #ifndef NULL
@@ -17,9 +22,5 @@
     #define PI 3.14159
 #endif //ifndef PI
 
-// template <typename T> int sgn(T val);
 #define sgn(x) ((x < 0.0)? -1 : 1)
-// inline int sgn(float a)
-// {
-//     return ((0 < a) - (a < 0));
-// }
+#define abs(x) ((x > 0)? x : (x * -1))
