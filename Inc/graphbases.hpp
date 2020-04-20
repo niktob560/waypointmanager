@@ -10,7 +10,7 @@ namespace graphbases
 	struct array
 	{
 		void *items;
-		size_t size;
+		uint8_t size;
 	};
 
 
@@ -59,10 +59,10 @@ namespace graphbases
 
     struct graphPoint
     {
-        struct graphPoint **targets = NULL;
-        size_t 				numOfTargets = 0;
+        struct graphPoint *targets[10];
+        uint8_t				numOfTargets = 0;
         uint16_t		 	weight = 0xFFFF;
-        size_t 				i = 0;
+        uint8_t				i = 0;
         bool 				calculated = false;
     };
     
