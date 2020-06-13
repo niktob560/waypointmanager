@@ -1,4 +1,7 @@
-#pragma once
+#ifndef __WAYPOINTMANAGER_HPP__
+#define __WAYPOINTMANAGER_HPP__
+
+
 #include <unistd.h>
 #include "graphbases.hpp"
 
@@ -18,3 +21,5 @@ namespace manager
     struct graphPoint* getCurr();
     
 }
+
+#endif

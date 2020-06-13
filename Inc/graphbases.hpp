@@ -1,6 +1,9 @@
-#pragma once
+#ifndef __GRAPH_BASES_HPP__
+#define __GRAPH_BASES_HPP__
+
+
 #include <unistd.h>
-#include <cstdint>
+#include <stdint.h>
 #include "math.hpp"
 
 namespace graphbases
@@ -67,3 +70,5 @@ namespace graphbases
     };
     
 }
+
+#endif

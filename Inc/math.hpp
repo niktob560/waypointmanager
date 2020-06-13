@@ -1,8 +1,9 @@
-#pragma once
+#ifndef __MATH_HPP__
+#define __MATH_HPP__
 
 #include <math.h>
-#include <cmath>
-#include <cstdint>
+#include <math.h>
+#include <stdint.h>
 
 #define sqr(x) ((x * x))
 
@@ -24,3 +25,5 @@
 
 #define sgn(x) ((x < 0.0)? -1 : 1)
 #define abs(x) ((x > 0)? x : (x * -1))
+
+#endif
